@@ -2179,19 +2179,26 @@ a:hover {
   z-index: 10;
 }
 
-.blog-cover section a {
+.blog-cover section a.link-btn {
   color: #fff;
   border: 0;
-  width: 36px;
-  height: 36px;
+  /*width: 36px;*/
+  height: 130px;
+  width: 130px;
+  padding-top: 63px;
   border: 2px solid #fff;
   display: inline-block;
-  padding: 10px 0;
-  border-radius: 42px;
+  /*padding: 15px 15px 15px 15px;*/
+  /*padding: 10px 0;*/
+  /*border-radius: 42px;*/
+  border-radius: 50%;
   margin: 1.5em 1em 0em 0;
   transition: 0.2s all ease;
   line-height: 0;
   text-align: center;
+}
+
+.blog-cover section a.company {
 }
 
 .blog-cover section a:hover {
@@ -2364,7 +2371,7 @@ a:hover {
   font-size: 28px !important;
   letter-spacing: -3px;
   padding: 6px 10px 6px 8px;
-  border: solid 1px #eee !important;
+  border: solid 1px #ccc !important;
   line-height: 1;
   border-radius: 4px;
 }
@@ -2428,6 +2435,12 @@ body.nav-hidden .site-nav {
   transition: all 0.35s ease;
   -webkit-transform: translate3d(0px, 0, 0px);
 }
+
+body.nav-hidden .site-nav {
+  transition: all 0.35s ease;
+  -webkit-transform: translate3d(0px, 0, 0px);
+}
+
 
 article {
   background: #fff;
@@ -2625,7 +2638,8 @@ article .highlight .lineno {
 article pre {
   border: 0;
   padding: 1.5em 3em;
-  margin: 0 -3em 1.5em;
+  margin: 0 0 25px 0;
+  /*margin: 0 -3em 1.5em;*/
   background: whitesmoke;
   border: 0;
   border-radius: 2px;
@@ -2874,7 +2888,7 @@ pre[class*="language-"]::selection,pre[class*="language-"] ::selection,code[clas
   }
 
   .blog-cover {
-    height: 200px;
+    height: 300px;
   }
 
   .blog-cover img {
@@ -2941,4 +2955,15 @@ pre[class*="language-"]::selection,pre[class*="language-"] ::selection,code[clas
   article .meta .author {
     display: none;
   }
+}
+
+#disqus_thread {
+  /*width: 80%;*/
+  margin: 0 auto;
+  margin: 0 8em;
+}
+
+article .container {
+  width: 75%;
+  max-width: 100%;
 }

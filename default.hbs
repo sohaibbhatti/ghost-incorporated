@@ -15,6 +15,8 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     
     {{! Open Graph & Twitter Cards }}
     <!-- <link rel="canonical" href="{{url absolute="true"}}">  -->
@@ -37,7 +39,8 @@
     <section class="site-nav">
         <header>
             <nav id="navigation">
-                {{#if @blog.logo}}<a class="brand" href="/">
+                <a href="{{@blog.url}}" class="brand">sb</a>
+                <!--{{#if @blog.logo}}<a class="brand" href="/">-->
                     <img src="{{@blog.logo}}" alt="{{@blog.title}}">
                 </a>{{/if}}
                 <a href="{{@blog.url}}" class="home">Blog</a>
@@ -62,7 +65,8 @@
             
             <nav class="social">
                 {{> social }}
-                <a class="icon-feed" href="{{@blog.url}}/rss/" title="RSS Feed"><span class="hidden">RSS Feed</span></a>
+                <a href="{{@blog.url}}/rss/" title="RSS Feed"><i class="fa fa-rss fa-2x"></i></a>
+                <!--<a class="icon-feed" href="{{@blog.url}}/rss/" title="RSS Feed"><span class="hidden">RSS Feed</span></a>-->
             </nav>
             
             <p><a href="https://github.com/jamesramsay/ghost-incorporated">Incorporated for Ghost</a> by <a href="https://jramsay.com.au">JR</a>. Proudly powered by <a class="poweredby icon-ghost" href="http://ghost.org">Ghost</a>.</p>

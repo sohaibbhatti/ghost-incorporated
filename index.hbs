@@ -5,19 +5,25 @@
 
 {{! The big featured header on the homepage, with the site logo and description }}
 <!-- TODO: Should this be a header? -->
+{{#ifhomepage}}
 <div class="blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <section>
         <div class="container">
             <h1>{{@blog.title}}</h1>
             {{#if @blog.description}}<h3>{{@blog.description}}</h3>{{/if}}
+            <h3>Hi. I'm a developer at <a href="http://kurobase.com/" class="company">KuroBase</a></h3>
             {{> header }}
-        </div>
+            <a href="/about" class="link-btn">About me</a>
+          </div>
+          <div>
+          </div>
     </section>
 </div>
+{{/ifhomepage}}
 
 
 {{! The main content area on the homepage }}
-<article class="container">
+<article class="container" id="container">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
     <section class="index"> <!-- post_class: {{post_class}} -->
